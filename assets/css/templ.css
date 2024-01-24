@@ -1,0 +1,182 @@
+[data-theme="light"] {
+  --color-bg: #fdf5e8;
+  --color-fg: #0f0f0f;
+  --shadow-color-1: rgba(10, 10, 10, 0.1);
+  --shadow-color-2: rgba(10, 10, 10, 0.02);
+}
+
+[data-theme="dark"] {
+  --color-bg: #202023;
+  --color-fg: #ffffff;
+  --shadow-color-1: rgba(83, 83, 83, 0.4);
+  --shadow-color-2: rgba(223, 207, 207, 0.21);
+}
+
+html body {
+  font-family: "Lato", sans-serif !important;
+}
+
+body {
+  height: 100vh !important;
+}
+
+.bar {
+  background-color: var(--color-fg) !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+  color: rgb(85, 147, 147) !important;
+}
+
+.navbar {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+body,
+section,
+div,
+button,
+footer,
+p,
+a,
+h1,
+h2,
+h3,
+nav,
+table *,
+strong {
+  background-color: var(--color-bg) !important;
+  color: var(--color-fg) !important;
+}
+
+.card {
+  box-shadow: 0 0.5em 1em -0.125em var(--shadow-color-1),
+    0 0 0 1px var(--shadow-color-2) !important;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-paddingless-horizontal {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: [xl-start] 1fr 1.5rem [md-start] minmax(0, 768px) [md-end] 1.5rem 1fr [xl-end];
+}
+
+.grid * {
+  grid-column: md;
+}
+.grid-xl {
+  grid-column: xl;
+}
+
+@media (max-width: 672px) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+h1 {
+  font-size: 1.875rem !important;
+  font-weight: 700 !important;
+}
+
+pre {
+  padding: 8 10;
+  border-radius: 10px !important;
+}
+
+.card-header-title {
+  justify-content: center !important;
+  padding-bottom: -10px !important;
+}
+
+p {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+
+code {
+  border-radius: 5px !important;
+  font-size: 12px !important;
+}
+
+img {
+  border-color: black !important;
+  border-width: thin !important;
+}
+
+p > code {
+  padding: 2 3;
+  border-radius: 3px;
+}
+
+pre {
+  position: relative !important;
+  padding: 0 !important;
+}
+
+pre > button {
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  opacity: 0 !important;
+}
+
+pre:hover > button {
+  opacity: 1 !important; /* Make the button appear on hover */
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-marginless {
+    margin-left: -12px !important;
+    margin-right: -12px !important;
+  }
+  #mode-btn {
+    margin-left: -0.2rem !important;
+  }
+}
+.button:hover {
+  border-color: #b5b5b5 !important;
+  color: #676767 !important;
+}
+.typewriter p {
+  color: #40d1cc !important;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(211, 139, 4); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  animation: typing 2.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
